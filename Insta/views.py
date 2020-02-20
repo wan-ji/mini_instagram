@@ -27,7 +27,7 @@ class PostsView(LoginRequiredMixin, ListView):
 		following = set()
 		for conn in UserConnection.objects.filter(creator=current_user).select_related('following'):
 			following.add(conn.following)
-		return Post.objects.filter(author__in=following)
+		return Post.objects.filter(author__in=following).order_by('-posted_on')
 
 class PostDetailView(DetailView):
 	model = Post
@@ -67,7 +67,15 @@ class UserUpdateView(LoginRequiredMixin, UpdateView):
 class PostCreateView(LoginRequiredMixin, CreateView):
 	model = Post
 	template_name = 'post_create.html'
-	fields = '__all__'
+	# fields = '__all__'
+	fields = ['title', 'image']
+
+	def form_valid(self, form):
+        #Add logged-in user as autor of comment THIS IS THE KEY TO THE SOLUTION
+		form.instance.author = self.request.user
+        # Call super-class form validation behaviour
+		return super(PostCreateView, self).form_valid(form)
+
 	login_url = 'login'
 
 

@@ -55,7 +55,7 @@ class Post(models.Model):
 		auto_now_add=True,
 		editable=False
 	)
-	
+
 	def get_like_count(self):
 		return self.likes.count()
 
