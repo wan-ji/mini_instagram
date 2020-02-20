@@ -1,0 +1,13 @@
+asgiref==3.2.3
+certifi==2019.11.28
+Django==3.0.3
+django-annoying==0.10.6
+django-appconf==1.0.3
+django-imagekit==4.0.2
+gunicorn==20.0.4
+pilkit==2.0
+Pillow==7.0.0
+pytz==2019.3
+six==1.14.0
+sqlparse==0.3.0
+whitenoise==5.0.1
