@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load custom_tags %}
+
+{% block content %}
+
+
+<div class="row" id="explore">
+    {% for post in object_list %}
+        <div class="col-xs-4 col-sm-3">
+            {% comment %} <div class="picture-square" style="background-image: url(http://{{ request.META.HTTP_HOST }}/{{ post.image.url }}); background-size: contain;"> {% endcomment %}
+            <div class="picture-square" style="background-image: url(/{{ post.image.url }}); background-size: contain;">
+                <a href="{% url 'post_detail' post.pk %}">
+                    <div class="content"></div> 
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
