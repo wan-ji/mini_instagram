@@ -11,6 +11,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 # from django.contrib.auth.forms import UserCreationForm
 from Insta.forms import CustomUserCreationForm
 
+# from rest_framework import generics
+# from .serializers import PostSerializer
 # Create your views here.
 
 class HelloWorld(TemplateView):
@@ -93,6 +95,10 @@ class SignUp(CreateView):
 	form_class = CustomUserCreationForm
 	template_name = 'signup.html'
 	success_url = reverse_lazy("login")
+
+# class PostAPIView(generics.ListAPIView):
+# 	queryset = Post.objects.all()
+# 	serializer_class = PostSerializer
 
 
 @ajax_request

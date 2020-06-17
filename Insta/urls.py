@@ -21,6 +21,8 @@ from Insta.views import (HelloWorld, PostsView, PostDetailView, PostCreateView,
                         UserUpdateView, addComment, toggleFollow, ExploreView
 )
 
+from api.views import PostAPIView
+
 urlpatterns = [
     path('', HelloWorld.as_view(), name='helloworld'),
     path('posts/', PostsView.as_view(), name='posts'),
@@ -33,6 +35,7 @@ urlpatterns = [
     path('user_update/<int:pk>/', UserUpdateView.as_view(), name='user_update'),
     path('comment', addComment, name='addComment'),
     path('togglefollow', toggleFollow, name='togglefollow'),
-    path('explore', ExploreView.as_view(), name='explore')
+    path('explore', ExploreView.as_view(), name='explore'),
+    path('api', PostAPIView.as_view(), name='api'),
 
 ]

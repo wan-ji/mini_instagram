@@ -1,7 +1,9 @@
 from django import forms
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
-from Insta.models import InstaUser
+from Insta.models import InstaUser, Post
+
+from rest_framework import serializers
 
 # forms defined here handles user inputs
 

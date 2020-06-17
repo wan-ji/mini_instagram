@@ -24,5 +24,6 @@ urlpatterns = [
     path('', include('Insta.urls')),
     path('auth/', include('django.contrib.auth.urls')),
     path('auth/signup/', SignUp.as_view(), name='signup'),
+    path('api/', include('rest_framework.urls')),
     
 ]
