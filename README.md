@@ -1,7 +1,7 @@
 # Mini Instagram
 
-## A mini Instagram built on Django for users to share posts 
+## A mini Instagram built on Django for users to share pictures 
 
 * Users can register accounts; share, edit, and delete posts; like and comment on posts; follow/unfollow other users
 
-* Deployed on Heroku [Link to the web](https://stark-tundra-12161.herokuapp.com/)
+* Deployed on AWS [Link to the web](http://insta-env.eba-emp2rgpk.us-west-2.elasticbeanstalk.com/)
