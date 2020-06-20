@@ -24,8 +24,9 @@ SECRET_KEY = 'sr_t1!x5kk407_+a8g@4dhzw0@2suvumk9rhblu6q=nlv0rcf2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['insta-env.eba-emp2rgpk.us-west-2.elasticbeanstalk.com', '127.0.0.1']
 
 
 # Application definition
@@ -155,7 +156,9 @@ else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
+# print('STATIC_URL = ', STATIC_URL)
+# print('BASE_DIR = ', BASE_DIR)
+# print('STATICFILES_STORAGE = ', STATICFILES_STORAGE)
 
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
